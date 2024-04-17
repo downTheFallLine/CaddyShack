@@ -1,0 +1,304 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "auditMessage",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_numberOfHoles",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "pars",
+						"type": "uint256[]"
+					}
+				],
+				"name": "addGolfCourse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_a",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_b",
+						"type": "string"
+					}
+				],
+				"name": "concatenateStrings",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_courseName",
+						"type": "string"
+					}
+				],
+				"name": "deleteCourse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getGolfCourses",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMyData",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "firstName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lastName",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "handicap",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct CaddyShack.Player",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMyHandicap",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_courseName",
+						"type": "string"
+					}
+				],
+				"name": "isCourseExtant",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_firstName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_lastName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_handicap",
+						"type": "uint256"
+					}
+				],
+				"name": "joinClub",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_courseName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "scores",
+						"type": "uint256[]"
+					}
+				],
+				"name": "playRound",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_handicap",
+						"type": "uint256"
+					}
+				],
+				"name": "setMyHandicap",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_uint",
+						"type": "uint256"
+					}
+				],
+				"name": "uintToString",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CaddyShack.sol": "CaddyShack"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CaddyShack.sol": {
+			"keccak256": "0x5207b550274366f1c075b6cb699bb4aca0a8ad0c8c26ff4bde899e027ea46df8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://832a1db08c1776df65e5e3e22f61eafaf56f02f4af7bbd21dfc523787c2c96f1",
+				"dweb:/ipfs/QmY5YixiRUdPXUxLoJowVi2TVooy9EWnkLGY4bjZKJhmhd"
+			]
+		},
+		"contracts/CamelFramework.sol": {
+			"keccak256": "0x5725c0d90d8f6ed6fbc19dd1c2d601a4821a0a8ea8d0ccbb97537570343422e5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d6cab33417df0665aa750e1af839a94ad38deb16e2950cae9dc903b5ac4d8827",
+				"dweb:/ipfs/QmVdQmHieksd24stGBkNWt5dMwKXRqJsKj24PVNAZeLrnT"
+			]
+		},
+		"contracts/CourseManager.sol": {
+			"keccak256": "0x61fa6d1ebd9944f58febea0e18f9a9010ca33e20b56f1d5c95f0d697401d0aa3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7a581452fa582735c76ecfc94852837ad0669f0f1389e86e9295a8136601d8ae",
+				"dweb:/ipfs/QmaiFSs2YXHzmbJxnQfc6fpNoFVgKETikWXaudjXbJ52Eq"
+			]
+		}
+	},
+	"version": 1
+}

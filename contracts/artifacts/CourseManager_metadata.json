@@ -1,0 +1,180 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_numberOfHoles",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "pars",
+						"type": "uint256[]"
+					}
+				],
+				"name": "addGolfCourse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_a",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_b",
+						"type": "string"
+					}
+				],
+				"name": "concatenateStrings",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_courseName",
+						"type": "string"
+					}
+				],
+				"name": "deleteCourse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getGolfCourses",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_courseName",
+						"type": "string"
+					}
+				],
+				"name": "isCourseExtant",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_uint",
+						"type": "uint256"
+					}
+				],
+				"name": "uintToString",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CourseManager.sol": "CourseManager"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CamelFramework.sol": {
+			"keccak256": "0x5725c0d90d8f6ed6fbc19dd1c2d601a4821a0a8ea8d0ccbb97537570343422e5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d6cab33417df0665aa750e1af839a94ad38deb16e2950cae9dc903b5ac4d8827",
+				"dweb:/ipfs/QmVdQmHieksd24stGBkNWt5dMwKXRqJsKj24PVNAZeLrnT"
+			]
+		},
+		"contracts/CourseManager.sol": {
+			"keccak256": "0xd84e23027102746c1b862be2dbc00e3c226165542a1d7132f186d1237e347887",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://22fd140c06ad93cfe2398d2b0abd4e278fe8b6dfafee17f66d268b625a9e4d75",
+				"dweb:/ipfs/QmVPaeieuBehM6ktXxFFsqRT2xF5GSUrEZXYWxq12iX8w4"
+			]
+		}
+	},
+	"version": 1
+}
