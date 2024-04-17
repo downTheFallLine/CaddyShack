@@ -17,11 +17,12 @@ contract CaddyShack is CamelFramework, CourseManager {
     struct Round {
         string courseName;
         uint timePlayed;
-        uint score;
+        uint[] score;
         address attestedBy;
     }
 
     mapping(address => Player) private players;
+    mapping (address => Round) private rounds;
 
     modifier handicapMustBeValid (uint _handicap) {
         require (isHandicapValid(_handicap),"handicap must be 54 or less in golf");
@@ -45,11 +46,16 @@ contract CaddyShack is CamelFramework, CourseManager {
         players[msg.sender].handicap = _handicap ;
     }
 
-    function playRound(string calldata _courseName, uint[] calldata scores) public golfCourseMustBeRegistered(_courseName) {
+    function playRound(string calldata _courseName, uint[] calldata _scores) public golfCourseMustBeRegistered(_courseName) {
         // record the round being played
+
+        address  _k;
+        Round memory _round =  Round({courseName: _courseName, score: _scores, attestedBy: _k, timePlayed: 0});
+        rounds[msg.sender] = _round;
+
         // look for amazing holes (par, birdie, etc) and create event
         for (uint i=0; i< golfCourses[_courseName].pars.length; i++) {
-            int  _overUnder = int(scores[i]) - int(golfCourses[_courseName].pars[i]);
+            int  _overUnder = int(_scores[i]) - int(golfCourses[_courseName].pars[i]);
             if (_overUnder == 0) { //
                 // scored a par at COURSE on hole X
                 string memory logMessage = concatenateStrings("scored a par at ", _courseName);
@@ -85,7 +91,7 @@ contract CaddyShack is CamelFramework, CourseManager {
                 logMessage = concatenateStrings(logMessage, uintToString(i+1));
                 emit auditMessage(msg.sender, logMessage);
             }
-            if (scores[i] == 1) { //
+            if (_scores[i] == 1) { //
                 // scored a part at COURSE on hole X
                 string memory logMessage = concatenateStrings("WOW a hole in one at ", _courseName);
                 logMessage = concatenateStrings(logMessage," on hole ");

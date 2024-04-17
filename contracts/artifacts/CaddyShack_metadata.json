@@ -206,7 +206,7 @@
 					},
 					{
 						"internalType": "uint256[]",
-						"name": "scores",
+						"name": "_scores",
 						"type": "uint256[]"
 					}
 				],
@@ -276,11 +276,11 @@
 	},
 	"sources": {
 		"contracts/CaddyShack.sol": {
-			"keccak256": "0x5207b550274366f1c075b6cb699bb4aca0a8ad0c8c26ff4bde899e027ea46df8",
+			"keccak256": "0xae46e745f69a430868d66ba0e44c244bf5eac0d1f91319e899a5f4fbebbf052b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://832a1db08c1776df65e5e3e22f61eafaf56f02f4af7bbd21dfc523787c2c96f1",
-				"dweb:/ipfs/QmY5YixiRUdPXUxLoJowVi2TVooy9EWnkLGY4bjZKJhmhd"
+				"bzz-raw://8303b63f645a548a9a7b7351605d70d61c0ae6ca63364de541c3f7a34e7f8b44",
+				"dweb:/ipfs/QmRkaqa5i2oXW8fGCLRWyMVEGg6RqNePnGsJaPv8cj6HaC"
 			]
 		},
 		"contracts/CamelFramework.sol": {
